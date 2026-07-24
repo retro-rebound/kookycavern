@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Kooky Cavern | Links</title>
+  <style>
+    /* Reset & CSS Variables */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-color: #0f111a;
+      --card-bg: #1a1d2e;
+      --card-hover: #262a42;
+      --accent-color: #ffe600; /* Bright energetic accent */
+      --text-main: #ffffff;
+      --text-muted: #b3b9c6;
+      --border-radius: 14px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 16px;
+    }
+
+    /* Container setup */
+    .container {
+      width: 100%;
+      max-width: 580px; /* Optimal reading/tap width on desktop */
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Logo & Header */
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid var(--accent-color);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .bio {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 32px;
+      max-width: 460px;
+    }
+
+    /* Link Stack */
+    .links-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .link-card {
+      display: block;
+      width: 100%;
+      padding: 18px 20px;
+      background-color: var(--card-bg);
+      color: var(--text-main);
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.4;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Primary highlight for sign-up offer */
+    .link-card.featured {
+      border-color: var(--accent-color);
+      background: linear-gradient(135deg, #1a1d2e 0%, #252312 100%);
+    }
+
+    .link-card.featured .highlight-text {
+      color: var(--accent-color);
+      display: block;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    /* Desktop Hover Effects */
+    @media (hover: hover) {
+      .link-card:hover {
+        transform: translateY(-2px);
+        background-color: var(--card-hover);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+      .link-card.featured:hover {
+        background: linear-gradient(135deg, #24283f 0%, #312e12 100%);
+      }
+    }
+
+    /* Active touch feedback for Mobile */
+    .link-card:active {
+      transform: scale(0.98);
+    }
+
+    /* Responsive Adjustments for Mobile Screens */
+    @media (max-width: 480px) {
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .bio {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+      }
+
+      .link-card {
+        padding: 16px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Replace logo.png with your actual image file name (e.g., logo.jpg, avatar.png) -->
+    <img src="logo.png" alt="The Kooky Cavern Logo" class="logo">
+
+    <h1>The Kooky Cavern</h1>
+    
+    <p class="bio">
+      We run live stream auctions every week on Whatnot. Come join us!
+    </p>
+
+    <div class="links-wrapper">
+      
+      <!-- Link 1: Whatnot Shows -->
+      <a href="https://www.whatnot.com/user/thekookycavern" target="_blank" rel="noopener" class="link-card">
+        📺 Join Our Weekly Whatnot Auctions
+      </a>
+
+      <!-- Link 2: Sign-up Credit Offer -->
+      <a href="https://whatnot.com/invite/thekookycavern" target="_blank" rel="noopener" class="link-card featured">
+        <span class="highlight-text">★ First time on Whatnot?</span>
+        Get $25 Free Credit to spend at our show!
+      </a>
+
+      <!-- Link 3: Instagram -->
+      <a href="https://www.instagram.com/thekookycavern" target="_blank" rel="noopener" class="link-card">
+        📸 Follow Us on Instagram
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>
