@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Kooky Cavern | Links</title>
+  
+  <!-- Favicon for Browser Tabs -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- Retro Pixel Font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <style>
     /* Reset & CSS Variables */
     * {
@@ -13,59 +23,76 @@
     }
 
     :root {
-      --bg-color: #0f111a;
-      --card-bg: #1a1d2e;
-      --card-hover: #262a42;
-      --accent-color: #ffe600; /* Bright energetic accent */
-      --text-main: #ffffff;
-      --text-muted: #b3b9c6;
-      --border-radius: 14px;
+      --bg-color: #923400;          /* Dark Orange */
+      --text-yellow: #ffe600;       /* Retro Yellow */
+      --border-radius: 8px;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Press Start 2P', monospace;
       background-color: var(--bg-color);
-      color: var(--text-main);
+      background-image: radial-gradient(circle, #b84300 0%, #521c00 100%);
+      color: #ffffff;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px 16px;
+      padding: 24px 16px;
     }
 
-    /* Container setup */
+    /* Main Container */
     .container {
       width: 100%;
-      max-width: 580px; /* Optimal reading/tap width on desktop */
+      max-width: 600px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    /* Logo & Header */
+    /* Logo Styling */
     .logo {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
-      border: 3px solid var(--accent-color);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      border: 4px solid #000000;
+      box-shadow: 0 0 0 4px var(--text-yellow), 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Headlines - Scaled Up */
+    .tagline {
+      font-size: 0.95rem;
+      color: var(--text-yellow);
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 0px #000000;
+      line-height: 1.5;
+    }
+
+    .sub-tagline {
+      font-size: 0.75rem;
+      color: #ffd2ad;
+      margin-bottom: 18px;
+      text-shadow: 2px 2px 0px #000000;
+      line-height: 1.5;
     }
 
     h1 {
-      font-size: 1.75rem;
-      font-weight: 700;
-      margin-bottom: 8px;
+      font-size: 1.45rem;
+      color: #ffffff;
+      margin-bottom: 14px;
+      text-shadow: 3px 3px 0px #000000;
+      line-height: 1.4;
     }
 
     .bio {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.5;
+      font-size: 0.8rem;
+      color: #ffffff;
+      line-height: 1.6;
       margin-bottom: 32px;
-      max-width: 460px;
+      max-width: 520px;
+      text-shadow: 2px 2px 0px #000000;
     }
 
     /* Link Stack */
@@ -73,76 +100,197 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
+      margin-bottom: 36px;
     }
 
-    .link-card {
-      display: block;
+    /* Arcade Push Buttons - Larger Text */
+    .retro-btn {
+      display: flex;
+      align-items: center;
       width: 100%;
-      padding: 18px 20px;
-      background-color: var(--card-bg);
-      color: var(--text-main);
+      padding: 16px 16px;
       text-decoration: none;
       border-radius: var(--border-radius);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      font-weight: 600;
-      font-size: 1rem;
-      line-height: 1.4;
-      transition: all 0.2s ease-in-out;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 4px solid #000000;
+      font-size: 0.78rem;
+      line-height: 1.5;
+      color: #ffffff;
+      text-shadow: 2px 2px 0px #000000;
+      transition: all 0.1s ease-in-out;
+      position: relative;
     }
 
-    /* Primary highlight for sign-up offer */
-    .link-card.featured {
-      border-color: var(--accent-color);
-      background: linear-gradient(135deg, #1a1d2e 0%, #252312 100%);
+    .btn-green {
+      background-color: #00a800;
+      box-shadow: inset 0 4px 0 #72f572, 0 6px 0 #005a00, 0 8px 12px rgba(0, 0, 0, 0.5);
     }
 
-    .link-card.featured .highlight-text {
-      color: var(--accent-color);
+    .btn-yellow {
+      background-color: var(--text-yellow);
+      color: #000000;
+      text-shadow: none;
+      box-shadow: inset 0 4px 0 #ffffff, 0 6px 0 #9e8e00, 0 8px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-red {
+      background-color: #e63946;
+      box-shadow: inset 0 4px 0 #ff8a93, 0 6px 0 #8a151d, 0 8px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Controller Badges [A], [B], [X] */
+    .btn-badge {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 42px;
+      height: 42px;
+      border-radius: 4px;
+      background: #000000;
+      border: 2px solid #ffffff;
+      color: var(--text-yellow);
+      font-size: 0.9rem;
+      margin-right: 14px;
+      flex-shrink: 0;
+    }
+
+    .btn-yellow .btn-badge {
+      background: #000000;
+      color: var(--text-yellow);
+      border-color: #ffffff;
+    }
+
+    .btn-text {
+      text-align: left;
+      flex-grow: 1;
+    }
+
+    .sub-offer {
       display: block;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
+      font-size: 0.62rem;
+      color: #d90429;
+      margin-bottom: 6px;
+      font-weight: bold;
     }
 
-    /* Desktop Hover Effects */
+    /* Button Hover/Click Push Animation */
     @media (hover: hover) {
-      .link-card:hover {
-        transform: translateY(-2px);
-        background-color: var(--card-hover);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      .retro-btn:hover {
+        transform: translateY(2px);
       }
-      .link-card.featured:hover {
-        background: linear-gradient(135deg, #24283f 0%, #312e12 100%);
+      .btn-green:hover {
+        box-shadow: inset 0 4px 0 #72f572, 0 4px 0 #005a00, 0 6px 10px rgba(0, 0, 0, 0.5);
+      }
+      .btn-yellow:hover {
+        box-shadow: inset 0 4px 0 #ffffff, 0 4px 0 #9e8e00, 0 6px 10px rgba(0, 0, 0, 0.5);
+      }
+      .btn-red:hover {
+        box-shadow: inset 0 4px 0 #ff8a93, 0 4px 0 #8a151d, 0 6px 10px rgba(0, 0, 0, 0.5);
       }
     }
 
-    /* Active touch feedback for Mobile */
-    .link-card:active {
-      transform: scale(0.98);
+    .retro-btn:active {
+      transform: translateY(6px) !important;
+      box-shadow: inset 0 2px 0 #000000, 0 0px 0 #000000 !important;
     }
 
-    /* Responsive Adjustments for Mobile Screens */
+    /* Store Location Footer Box - Larger Text */
+    .store-location {
+      width: 100%;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.65);
+      border: 4px solid var(--text-yellow);
+      border-radius: var(--border-radius);
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      transition: all 0.1s ease-in-out;
+    }
+
+    .store-title {
+      font-size: 0.8rem;
+      color: var(--text-yellow);
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    .store-address {
+      font-size: 0.68rem;
+      color: #ffffff;
+      line-height: 1.6;
+      text-shadow: 1px 1px 0 #000;
+    }
+
+    .map-badge {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 0.6rem;
+      color: #ffffff;
+      background-color: #00a800;
+      padding: 8px 12px;
+      border-radius: 4px;
+      border: 2px solid #000000;
+      text-shadow: 1px 1px 0 #000;
+    }
+
+    .store-location:hover {
+      background-color: rgba(0, 0, 0, 0.85);
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Tweaks - Keeps larger text readable without overflow */
     @media (max-width: 480px) {
       .logo {
         width: 100px;
         height: 100px;
       }
 
+      .tagline {
+        font-size: 0.8rem;
+      }
+
+      .sub-tagline {
+        font-size: 0.62rem;
+      }
+
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
       }
 
       .bio {
-        font-size: 0.95rem;
-        margin-bottom: 24px;
+        font-size: 0.68rem;
+        line-height: 1.5;
       }
 
-      .link-card {
-        padding: 16px;
-        font-size: 0.95rem;
+      .retro-btn {
+        padding: 12px;
+        font-size: 0.68rem;
+      }
+
+      .btn-badge {
+        min-width: 34px;
+        height: 34px;
+        font-size: 0.78rem;
+        margin-right: 10px;
+      }
+
+      .sub-offer {
+        font-size: 0.55rem;
+      }
+
+      .store-title {
+        font-size: 0.7rem;
+      }
+
+      .store-address {
+        font-size: 0.6rem;
+      }
+
+      .map-badge {
+        font-size: 0.52rem;
       }
     }
   </style>
@@ -150,10 +298,13 @@
 <body>
 
   <div class="container">
-    <!-- Replace logo.png with your actual image file name (e.g., logo.jpg, avatar.png) -->
+    <!-- Replace logo.png with your actual logo file -->
     <img src="logo.png" alt="The Kooky Cavern Logo" class="logo">
 
-    <h1>The Kooky Cavern</h1>
+    <div class="tagline">BUY • SELL • TRADE</div>
+    <div class="sub-tagline">TCGs, Video Games and Other Collectibles</div>
+
+    <h1>THE KOOKY CAVERN</h1>
     
     <p class="bio">
       We run live stream auctions every week on Whatnot. Come join us!
@@ -161,23 +312,36 @@
 
     <div class="links-wrapper">
       
-      <!-- Link 1: Whatnot Shows -->
-      <a href="https://www.whatnot.com/user/thekookycavern" target="_blank" rel="noopener" class="link-card">
-        📺 Join Our Weekly Whatnot Auctions
+      <!-- Link 1: Whatnot Auctions -->
+      <a href="https://www.whatnot.com/user/thekookycavern" target="_blank" rel="noopener" class="retro-btn btn-green">
+        <span class="btn-badge">A</span>
+        <span class="btn-text">JOIN WEEKLY WHATNOT AUCTIONS</span>
       </a>
 
-      <!-- Link 2: Sign-up Credit Offer -->
-      <a href="https://whatnot.com/invite/thekookycavern" target="_blank" rel="noopener" class="link-card featured">
-        <span class="highlight-text">★ First time on Whatnot?</span>
-        Get $25 Free Credit to spend at our show!
+      <!-- Link 2: $25 Credit Offer -->
+      <a href="https://whatnot.com/invite/thekookycavern" target="_blank" rel="noopener" class="retro-btn btn-yellow">
+        <span class="btn-badge">B</span>
+        <span class="btn-text">
+          <span class="sub-offer">★ FIRST TIME ON WHATNOT?</span>
+          GET $25 FREE CREDIT
+        </span>
       </a>
 
       <!-- Link 3: Instagram -->
-      <a href="https://www.instagram.com/thekookycavern" target="_blank" rel="noopener" class="link-card">
-        📸 Follow Us on Instagram
+      <a href="https://www.instagram.com/thekookycavern" target="_blank" rel="noopener" class="retro-btn btn-red">
+        <span class="btn-badge">X</span>
+        <span class="btn-text">FOLLOW US ON INSTAGRAM</span>
       </a>
 
     </div>
+
+    <!-- Store Location Footer -->
+    <a href="https://www.google.com/maps/search/?api=1&query=The+Townsite+Market+5831+Ash+Ave+Powell+River+BC" target="_blank" rel="noopener" class="store-location">
+      <div class="store-title">📍 VISIT OUR STORE</div>
+      <div class="store-address">The Townsite Market<br>5831 Ash Ave, Powell River, BC</div>
+      <span class="map-badge">OPEN GOOGLE MAPS ↗</span>
+    </a>
+
   </div>
 
 </body>
