@@ -4,27 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Kooky Cavern | Links</title>
-  
-  <!-- Favicon for Browser Tabs -->
   <link rel="icon" type="image/png" href="logo.png">
   <link rel="apple-touch-icon" href="logo.png">
-
-  <!-- Retro Pixel Font from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <style>
-    /* Reset & CSS Variables */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg-color: #923400;          /* Dark Orange */
-      --text-yellow: #ffe600;       /* Retro Yellow */
+      --bg-color: #923400;
+      --text-yellow: #ffe600;
       --border-radius: 8px;
     }
 
@@ -32,7 +23,7 @@
       font-family: 'Press Start 2P', monospace;
       background-color: var(--bg-color);
       background-image: radial-gradient(circle, #b84300 0%, #521c00 100%);
-      color: #ffffff;
+      color: #fff;
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -40,7 +31,6 @@
       padding: 24px 16px;
     }
 
-    /* Main Container */
     .container {
       width: 100%;
       max-width: 600px;
@@ -50,52 +40,133 @@
       align-items: center;
     }
 
-    /* Logo Styling */
     .logo {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
-      border: 4px solid #000000;
-      box-shadow: 0 0 0 4px var(--text-yellow), 0 8px 16px rgba(0, 0, 0, 0.5);
+      border: 4px solid #000;
+      box-shadow: 0 0 0 4px var(--text-yellow), 0 8px 16px rgba(0,0,0,.5);
     }
 
-    /* Headlines - Scaled Up */
     .tagline {
-      font-size: 0.95rem;
+      font-size: .95rem;
       color: var(--text-yellow);
       margin-bottom: 10px;
-      text-shadow: 2px 2px 0px #000000;
+      text-shadow: 2px 2px 0 #000;
       line-height: 1.5;
     }
 
     .sub-tagline {
-      font-size: 0.75rem;
+      font-size: .75rem;
       color: #ffd2ad;
       margin-bottom: 18px;
-      text-shadow: 2px 2px 0px #000000;
+      text-shadow: 2px 2px 0 #000;
       line-height: 1.5;
     }
 
     h1 {
       font-size: 1.85rem;
-      color: #ffffff;
+      color: #fff;
       margin-bottom: 14px;
-      text-shadow: 3px 3px 0px #000000;
+      text-shadow: 3px 3px 0 #000;
       line-height: 1.4;
     }
 
     .bio {
-      font-size: 0.8rem;
-      color: #ffffff;
+      font-size: .8rem;
+      color: #fff;
       line-height: 1.6;
       margin-bottom: 32px;
       max-width: 520px;
-      text-shadow: 2px 2px 0px #000000;
+      text-shadow: 2px 2px 0 #000;
     }
 
-    /* Link Stack */
+    /* ONLINE AUCTIONS */
+
+    .auction-panel {
+      width: 100%;
+      margin-bottom: 36px;
+    }
+
+    .auction-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 190px;
+      padding: 28px 20px;
+      text-decoration: none;
+      text-align: center;
+      background: #000;
+      color: #fff;
+      border: 5px solid var(--text-yellow);
+      border-radius: var(--border-radius);
+      box-shadow:
+        inset 0 0 0 3px #7a2a00,
+        0 8px 0 #4d1800,
+        0 12px 18px rgba(0,0,0,.55);
+      transition: all .1s ease-in-out;
+    }
+
+    .auction-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      text-shadow: 3px 3px 0 #7a2a00;
+    }
+
+    .auction-title {
+      color: var(--text-yellow);
+      font-size: 1.15rem;
+      line-height: 1.5;
+      text-shadow: 3px 3px 0 #000;
+      margin-bottom: 12px;
+    }
+
+    .auction-subtitle {
+      color: #fff;
+      font-size: .68rem;
+      line-height: 1.7;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    .auction-button {
+      margin-top: 18px;
+      padding: 10px 16px;
+      background: #e63946;
+      color: #fff;
+      border: 3px solid #000;
+      border-radius: 4px;
+      font-size: .65rem;
+      text-shadow: 2px 2px 0 #000;
+      box-shadow: inset 0 3px 0 #ff8a93, 0 4px 0 #8a151d;
+    }
+
+    @media (hover:hover) {
+      .auction-link:hover {
+        transform: translateY(-3px);
+        background: #171717;
+        border-color: #fff000;
+        box-shadow:
+          inset 0 0 0 3px #7a2a00,
+          0 11px 0 #4d1800,
+          0 15px 22px rgba(0,0,0,.6);
+      }
+
+      .auction-link:hover .auction-button {
+        background: #ff4654;
+      }
+    }
+
+    .auction-link:active {
+      transform: translateY(6px);
+      box-shadow: inset 0 2px 0 #000, 0 0 0 #000;
+    }
+
+    /* BUTTONS */
+
     .links-wrapper {
       width: 100%;
       display: flex;
@@ -104,41 +175,39 @@
       margin-bottom: 36px;
     }
 
-    /* Arcade Push Buttons - Larger Text */
     .retro-btn {
       display: flex;
       align-items: center;
       width: 100%;
-      padding: 16px 16px;
+      padding: 16px;
       text-decoration: none;
       border-radius: var(--border-radius);
-      border: 4px solid #000000;
-      font-size: 0.78rem;
+      border: 4px solid #000;
+      font-size: .78rem;
       line-height: 1.5;
-      color: #ffffff;
-      text-shadow: 2px 2px 0px #000000;
-      transition: all 0.1s ease-in-out;
+      color: #fff;
+      text-shadow: 2px 2px 0 #000;
+      transition: all .1s ease-in-out;
       position: relative;
     }
 
     .btn-green {
-      background-color: #00a800;
-      box-shadow: inset 0 4px 0 #72f572, 0 6px 0 #005a00, 0 8px 12px rgba(0, 0, 0, 0.5);
+      background: #00a800;
+      box-shadow: inset 0 4px 0 #72f572, 0 6px 0 #005a00, 0 8px 12px rgba(0,0,0,.5);
     }
 
     .btn-yellow {
-      background-color: var(--text-yellow);
-      color: #000000;
+      background: var(--text-yellow);
+      color: #000;
       text-shadow: none;
-      box-shadow: inset 0 4px 0 #ffffff, 0 6px 0 #9e8e00, 0 8px 12px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 0 4px 0 #fff, 0 6px 0 #9e8e00, 0 8px 12px rgba(0,0,0,.5);
     }
 
     .btn-red {
-      background-color: #e63946;
-      box-shadow: inset 0 4px 0 #ff8a93, 0 6px 0 #8a151d, 0 8px 12px rgba(0, 0, 0, 0.5);
+      background: #e63946;
+      box-shadow: inset 0 4px 0 #ff8a93, 0 6px 0 #8a151d, 0 8px 12px rgba(0,0,0,.5);
     }
 
-    /* Controller Badges [A], [B], [X] */
     .btn-badge {
       display: flex;
       justify-content: center;
@@ -146,18 +215,18 @@
       min-width: 42px;
       height: 42px;
       border-radius: 4px;
-      background: #000000;
-      border: 2px solid #ffffff;
+      background: #000;
+      border: 2px solid #fff;
       color: var(--text-yellow);
-      font-size: 0.9rem;
+      font-size: .9rem;
       margin-right: 14px;
       flex-shrink: 0;
     }
 
     .btn-yellow .btn-badge {
-      background: #000000;
+      background: #000;
       color: var(--text-yellow);
-      border-color: #ffffff;
+      border-color: #fff;
     }
 
     .btn-text {
@@ -167,59 +236,51 @@
 
     .sub-offer {
       display: block;
-      font-size: 0.62rem;
+      font-size: .62rem;
       color: #d90429;
       margin-bottom: 6px;
       font-weight: bold;
     }
 
-    /* Button Hover/Click Push Animation */
-    @media (hover: hover) {
-      .retro-btn:hover {
-        transform: translateY(2px);
-      }
-      .btn-green:hover {
-        box-shadow: inset 0 4px 0 #72f572, 0 4px 0 #005a00, 0 6px 10px rgba(0, 0, 0, 0.5);
-      }
-      .btn-yellow:hover {
-        box-shadow: inset 0 4px 0 #ffffff, 0 4px 0 #9e8e00, 0 6px 10px rgba(0, 0, 0, 0.5);
-      }
-      .btn-red:hover {
-        box-shadow: inset 0 4px 0 #ff8a93, 0 4px 0 #8a151d, 0 6px 10px rgba(0, 0, 0, 0.5);
-      }
+    @media (hover:hover) {
+      .retro-btn:hover { transform: translateY(-2px); }
+      .btn-green:hover { background: #00bd00; }
+      .btn-yellow:hover { background: #fff000; }
+      .btn-red:hover { background: #ff4654; }
     }
 
     .retro-btn:active {
       transform: translateY(6px) !important;
-      box-shadow: inset 0 2px 0 #000000, 0 0px 0 #000000 !important;
+      box-shadow: inset 0 2px 0 #000, 0 0 0 #000 !important;
     }
 
-    /* Store Location Footer Box - Larger Text */
+    /* STORE */
+
     .store-location {
       width: 100%;
       padding: 20px;
-      background-color: rgba(0, 0, 0, 0.65);
+      background: rgba(0,0,0,.65);
       border: 4px solid var(--text-yellow);
       border-radius: var(--border-radius);
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-      transition: all 0.1s ease-in-out;
+      box-shadow: 0 8px 16px rgba(0,0,0,.4);
+      transition: all .1s ease-in-out;
     }
 
     .store-title {
-      font-size: 0.8rem;
+      font-size: .8rem;
       color: var(--text-yellow);
       text-shadow: 2px 2px 0 #000;
     }
 
     .store-address {
-      font-size: 0.68rem;
-      color: #ffffff;
+      font-size: .68rem;
+      color: #fff;
       line-height: 1.6;
       text-shadow: 1px 1px 0 #000;
     }
@@ -227,99 +288,118 @@
     .map-badge {
       display: inline-block;
       margin-top: 4px;
-      font-size: 0.6rem;
-      color: #ffffff;
-      background-color: #00a800;
+      font-size: .6rem;
+      color: #fff;
+      background: #00a800;
       padding: 8px 12px;
       border-radius: 4px;
-      border: 2px solid #000000;
+      border: 2px solid #000;
       text-shadow: 1px 1px 0 #000;
     }
 
     .store-location:hover {
-      background-color: rgba(0, 0, 0, 0.85);
+      background: rgba(0,0,0,.85);
       transform: translateY(-2px);
     }
 
-    /* Mobile Tweaks - Keeps larger text readable without overflow */
-    @media (max-width: 480px) {
-      .logo {
-        width: 100px;
-        height: 100px;
-      }
+    /* ICOllector LOGO LINK */
 
-      .tagline {
-        font-size: 0.8rem;
-      }
+    .icollector-link {
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
 
-      .sub-tagline {
-        font-size: 0.62rem;
-      }
+    .icollector-link img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
-      h1 {
-        font-size: 1.1rem;
-      }
-
-      .bio {
-        font-size: 0.68rem;
-        line-height: 1.5;
-      }
-
-      .retro-btn {
-        padding: 12px;
-        font-size: 0.68rem;
-      }
-
-      .btn-badge {
-        min-width: 34px;
-        height: 34px;
-        font-size: 0.78rem;
-        margin-right: 10px;
-      }
-
-      .sub-offer {
-        font-size: 0.55rem;
-      }
-
-      .store-title {
-        font-size: 0.7rem;
-      }
-
-      .store-address {
-        font-size: 0.6rem;
-      }
-
-      .map-badge {
-        font-size: 0.52rem;
-      }
+    @media (max-width:480px) {
+      .logo { width: 100px; height: 100px; }
+      .tagline { font-size: .8rem; }
+      .sub-tagline { font-size: .62rem; }
+      h1 { font-size: 1.1rem; }
+      .bio { font-size: .68rem; line-height: 1.5; }
+      .auction-link { min-height: 175px; padding: 22px 14px; }
+      .auction-icon { font-size: 2rem; }
+      .auction-title { font-size: .85rem; }
+      .auction-subtitle { font-size: .58rem; }
+      .auction-button { font-size: .55rem; }
+      .retro-btn { padding: 12px; font-size: .68rem; }
+      .btn-badge { min-width: 34px; height: 34px; font-size: .78rem; margin-right: 10px; }
+      .sub-offer { font-size: .55rem; }
+      .store-title { font-size: .7rem; }
+      .store-address { font-size: .6rem; }
+      .map-badge { font-size: .52rem; }
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="container">
-    <!-- Replace logo.png with your actual logo file -->
+
     <img src="logo.png" alt="The Kooky Cavern Logo" class="logo">
 
     <h1>THE KOOKY CAVERN</h1>
 
     <div class="tagline">BUY • SELL • TRADE</div>
-    <div class="sub-tagline">Pokemon, MTG, Video Games and Other Collectibles</div>
-    
+
+    <div class="sub-tagline">
+      Pokemon, MTG, Video Games and Other Collectibles
+    </div>
+
     <p class="bio">
-      We run live stream auctions every week on Whatnot. Come join us!
+      Are you a collector, estate executor, or baragin hunter? We are here to help!
     </p>
 
+    <!-- CURRENT ONLINE AUCTIONS -->
+    <div class="auction-panel">
+      <a
+        href="https://www.icollector.com/auctioneer.aspx?ae=3203"
+        target="_blank"
+        rel="noopener"
+        class="auction-link"
+      >
+        <div class="auction-icon">🔨</div>
+
+        <div class="auction-title">
+          VIEW OUR CURRENT<br>
+	  ONLINE AUCTIONS<br>
+	  & 
+	  CONTACT INFO
+        </div>
+
+        <div class="auction-subtitle">
+          Browse our latest collectibles<br>
+          and upcoming auctions on iCollector
+        </div>
+
+        <div class="auction-button">
+          ENTER AUCTIONS ↗
+        </div>
+      </a>
+    </div>
+
+    <!-- WHATNOT / SOCIAL LINKS -->
     <div class="links-wrapper">
-      
-      <!-- Link 1: Whatnot Auctions -->
-      <a href="https://www.whatnot.com/user/thekookycavern" target="_blank" rel="noopener" class="retro-btn btn-green">
+
+      <a
+        href="https://www.whatnot.com/user/thekookycavern"
+        target="_blank"
+        rel="noopener"
+        class="retro-btn btn-green"
+      >
         <span class="btn-badge">A</span>
-        <span class="btn-text">JOIN WEEKLY WHATNOT AUCTIONS</span>
+        <span class="btn-text">FOLLOW US ON WHATNOT</span>
       </a>
 
-      <!-- Link 2: $25 Credit Offer -->
-      <a href="https://whatnot.com/invite/thekookycavern" target="_blank" rel="noopener" class="retro-btn btn-yellow">
+      <a
+        href="https://whatnot.com/invite/thekookycavern"
+        target="_blank"
+        rel="noopener"
+        class="retro-btn btn-yellow"
+      >
         <span class="btn-badge">B</span>
         <span class="btn-text">
           <span class="sub-offer">★ FIRST TIME ON WHATNOT?</span>
@@ -327,22 +407,52 @@
         </span>
       </a>
 
-      <!-- Link 3: Instagram -->
-      <a href="https://www.instagram.com/thekookycavern" target="_blank" rel="noopener" class="retro-btn btn-red">
+      <a
+        href="https://www.instagram.com/thekookycavern"
+        target="_blank"
+        rel="noopener"
+        class="retro-btn btn-red"
+      >
         <span class="btn-badge">X</span>
         <span class="btn-text">FOLLOW US ON INSTAGRAM</span>
       </a>
 
     </div>
 
-    <!-- Store Location Footer -->
-    <a href="https://www.google.com/maps/search/?api=1&query=The+Townsite+Market+5831+Ash+Ave+Powell+River+BC" target="_blank" rel="noopener" class="store-location">
+    <!-- STORE LOCATION -->
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=The+Townsite+Market+5831+Ash+Ave+Powell+River+BC"
+      target="_blank"
+      rel="noopener"
+      class="store-location"
+    >
       <div class="store-title">📍 VISIT OUR STORE</div>
-      <div class="store-address">The Townsite Market<br>5831 Ash Ave, Powell River, BC</div>
-      <span class="map-badge">OPEN GOOGLE MAPS ↗</span>
+
+      <div class="store-address">
+        The Townsite Market<br>
+        5831 Ash Ave, Powell River, BC
+      </div>
+
+      <span class="map-badge">
+        OPEN GOOGLE MAPS ↗
+      </span>
     </a>
 
-  </div>
+    <!-- ICOllector LOGO LINK -->
+    <div class="icollector-link">
+      <a
+        href="https://www.icollector.com/auctioneer.aspx?ae=3203"
+        title="View Online Auctions"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="https://www.icollector.com/graphics/logos/link_logo.png"
+          alt="iCollector.com"
+        >
+      </a>
+    </div>
 
+  </div>
 </body>
 </html>
